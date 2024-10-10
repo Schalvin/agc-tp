@@ -14,7 +14,8 @@ from agc import write_OTU
 
 def test_read_fasta(global_data):
     """Test fasta reading"""
-    fasta_reader = read_fasta(Path(__file__).parent / "test_sequences.fasta.gz", 200)
+    fasta_reader = read_fasta(
+        Path(__file__).parent / "test_sequences.fasta.gz", 200)
     assert (
         next(fasta_reader)
         == "TGGGGAATATTGCACAATGGGCGCAAGCCTGATGCAGCCATGCCGCGTGTATGAAGAAGGCCTTCGGGTTGTAAAGTACTTTCAGCGGGGAGGAAGGTGTTGTGGTTAATAACCGCAGCAATTGACGTTACCCGCAGAAGAAGCACCGGCTAACTCCGTGCCAGCAGCCGCGGTAATACGGAGGGTGCAAGCGTTAATCGGAATTACTGGGCGGAAAGCGCA"
